@@ -10,7 +10,6 @@ class fake_bkg_estimation( object ) :
   
   folder     : /afs/cern.ch/work/m/manzoni/public/tH_ntuple/antiIsolatedTau/
   method     : f12, f3
-  lepton     : electron, muon
   knnfolder  : /afs/cern.ch/work/m/manzoni/public/tH_ntuple/antiIsolatedTau/weights
   MVA_method : KNN (Default)
   '''
@@ -21,8 +20,10 @@ class fake_bkg_estimation( object ) :
     self.method_     = method
     self.knnfolder_  = knnfolder
     self.MVA_method_ = MVA_method
-    self.histo_      = ROOT.TH1F('muon_pt','muon_pt',10,0,100)
-
+    self.histo_      = ROOT.TH1F('Mmt','Mmt',10,0,150)
+    self.weights_    = {}
+    
+    ROOT.TH1.SetDefaultSumw2()
   
   def take_sample(self, sample, region, tree_name = 'Tree') :
     '''
@@ -68,11 +69,13 @@ class fake_bkg_estimation( object ) :
   def loop_over_tree(self, sample, region, tree_name = 'Tree') :
     
     tree = self.take_sample(sample, region, tree_name)
+    
+    weights = self.get_weights()
         
     for evt in tree :
       if region == 'antiMu' :
         weight_mu = self.evaluate_mva_weigh(evt.muon_pt    , evt.muon_kNN_jetpt    , evt.evt_njet, 'muon'    )
-        weight = weight_mu / (1. - weight_mu)      
+        weight = weight_mu / (1. - weight_mu)    
       if region == 'antiE' :
         weight_el = self.evaluate_mva_weigh(evt.electron_pt, evt.electron_kNN_jetpt, evt.evt_njet, 'electron')
         weight = weight_el / (1. - weight_el)
@@ -80,17 +83,29 @@ class fake_bkg_estimation( object ) :
         weight_mu = self.evaluate_mva_weigh(evt.muon_pt    , evt.muon_kNN_jetpt    , evt.evt_njet, 'muon'    )
         weight_el = self.evaluate_mva_weigh(evt.electron_pt, evt.electron_kNN_jetpt, evt.evt_njet, 'electron')
         weight    = -1. * (weight_mu / (1. - weight_mu)) * (weight_el / (1. - weight_el))
-
-      #self.histo_.Fill( evt.muon_pt, weight )
+      
+      weight *= self.weights_[region]      
       self.histo_.Fill( evt.evt_Mmt, weight )
       
-      
-      
-      
-      
-      
-      
-      
+
+  def get_weights(self, tree_name = 'Tree') :
+    
+    yields = { 
+               'antiE'  :{'data':1.,'WZ':1.,'ZZ':1.,'TTW':1.,'TTZ':1.,'tt1l':1.,'tt2l':1.,},
+               'antiMu' :{'data':1.,'WZ':1.,'ZZ':1.,'TTW':1.,'TTZ':1.,'tt1l':1.,'tt2l':1.,},
+               'antiEMu':{'data':1.,'WZ':1.,'ZZ':1.,'TTW':1.,'TTZ':1.,'tt1l':1.,'tt2l':1.,},
+             }
+    for region in yields.keys() :         
+      for sample in yields[region] :
+        tree = self.take_sample(sample, region, tree_name)
+        h1 = ROOT.TH1F('h1','h1',1,0,10000000)
+        tree.Draw('evt_Mmt>>h1','evt_weight')      
+        yields[region][sample] = h1.Integral()  
+    
+    self.weights_['antiE']   = 1. - (yields['antiE']  ['WZ'] + yields['antiE']  ['ZZ'] + yields['antiE']  ['TTW'] + yields['antiE']  ['TTZ'] + yields['antiE']  ['tt1l'] + yields['antiE']  ['tt2l']) / yields['antiE']  ['data']
+    self.weights_['antiMu']  = 1. - (yields['antiMu'] ['WZ'] + yields['antiMu'] ['ZZ'] + yields['antiMu'] ['TTW'] + yields['antiMu'] ['TTZ'] + yields['antiMu'] ['tt1l'] + yields['antiMu'] ['tt2l']) / yields['antiMu'] ['data']
+    self.weights_['antiEMu'] = 1. - (yields['antiEMu']['WZ'] + yields['antiEMu']['ZZ'] + yields['antiEMu']['TTW'] + yields['antiEMu']['TTZ'] + yields['antiEMu']['tt1l'] + yields['antiEMu']['tt2l']) / yields['antiEMu']['data']
+          
       
       
       
