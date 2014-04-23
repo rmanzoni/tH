@@ -106,7 +106,10 @@ class fake_bkg_estimation( object ) :
     self.weights_['antiMu']  = 1. - (yields['antiMu'] ['WZ'] + yields['antiMu'] ['ZZ'] + yields['antiMu'] ['TTW'] + yields['antiMu'] ['TTZ'] + yields['antiMu'] ['tt1l'] + yields['antiMu'] ['tt2l']) / yields['antiMu'] ['data']
     self.weights_['antiEMu'] = 1. - (yields['antiEMu']['WZ'] + yields['antiEMu']['ZZ'] + yields['antiEMu']['TTW'] + yields['antiEMu']['TTZ'] + yields['antiEMu']['tt1l'] + yields['antiEMu']['tt2l']) / yields['antiEMu']['data']
           
-      
+
+#   def evaluate_mva_weigh12(self, muon_pt, muon_kNN_jetpt, evt_njet, electron_pt, electron_kNN_jetpt, evt_njet) :
+#     
+#          
       
       
       
