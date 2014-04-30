@@ -1,0 +1,115 @@
+2014-02-19 06:41:31,635 [DEBUG] 	/afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_3/python/crab.py -cfg crab_tHq.cfg -create -submit
+
+2014-02-19 06:41:31,636 [INFO] 	Version 2.10.3 running on Wed Feb 19 06:41:31 2014 CET (05:41:31 UTC)
+
+crab. Working options:
+	scheduler           glite
+	job type            CMSSW
+	server              OFF
+	working directory   /afs/cern.ch/work/y/ytakahas/htautau_2014/CMSSW_5_3_14/src/CMGTools/H2TauTau/Crab/crab_0_140219_064131/
+
+2014-02-19 06:41:31,636 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/allowed_releases.conf].
+2014-02-19 06:41:31,637 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0x1e9df638>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:31,638 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_crab/0_GET_allowed_releases.conf expired, refreshing cache
+2014-02-19 06:41:31,638 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/allowed_releases.conf
+	data: {}
+2014-02-19 06:41:31,788 [DEBUG] 	Downloading config files for WMS: http://cmsdoc.cern.ch/cms/LCG/crab/config/
+2014-02-19 06:41:31,789 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/glite_wms_CERN.conf].
+2014-02-19 06:41:31,789 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0x1eb317a0>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:31,790 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_crab/0_GET_glite_wms_CERN.conf expired, refreshing cache
+2014-02-19 06:41:31,790 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/glite_wms_CERN.conf
+	data: {}
+2014-02-19 06:41:31,810 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'conn': <httplib.HTTPSConnection instance at 0x1eb31758>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:31,810 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'conn': <httplib.HTTPSConnection instance at 0x1eb317a0>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:31,810 [DEBUG] 	Input whitelist: 
+2014-02-19 06:41:31,811 [DEBUG] 	Input blacklist: T0, T1
+2014-02-19 06:41:31,812 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache/0_GET_site-names.json expired, refreshing cache
+2014-02-19 06:41:31,812 [DEBUG] 	getData: 
+	url: /sitedb/data/prod/site-names
+	data: {}
+2014-02-19 06:41:31,977 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache/0_GET_site-resources.json expired, refreshing cache
+2014-02-19 06:41:31,977 [DEBUG] 	getData: 
+	url: /sitedb/data/prod/site-resources
+	data: {}
+2014-02-19 06:41:32,210 [DEBUG] 	Converted whitelist: 
+2014-02-19 06:41:32,210 [DEBUG] 	Converted blacklist: srm-cms-mss.jinr-t1.ru, srm-cms.cern.ch, cmssrm.fnal.gov, srm-cms.gridpp.rl.ac.uk, srm-cms.jinr-t1.ru, cmssrm-kit.gridka.de, storm-fe-cms.cr.cnaf.infn.it, cmssrmdisk.fnal.gov, srmcms.pic.es, srm-cms-disk.gridpp.rl.ac.uk, ccsrm.in2p3.fr, srm-eoscms.cern.ch, srm2.grid.sinica.edu.tw
+2014-02-19 06:41:32,210 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/myproxy_server.conf].
+2014-02-19 06:41:32,211 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0x1eb27b00>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:32,211 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_crab/0_GET_myproxy_server.conf expired, refreshing cache
+2014-02-19 06:41:32,211 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/myproxy_server.conf
+	data: {}
+2014-02-19 06:41:32,216 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/site_black_list.conf].
+2014-02-19 06:41:32,217 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0x1eb27b00>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:32,217 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_crab/0_GET_site_black_list.conf expired, refreshing cache
+2014-02-19 06:41:32,217 [DEBUG] 	getData: 
+	url: /cms/LCG/crab/config/site_black_list.conf
+	data: {}
+2014-02-19 06:41:32,222 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,T1_ES,T1_FR,T1_RU,T1_TW,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-02-19 06:41:36,723 [INFO] 	Your proxy will expire in:
+	0 hours 00 minutes 00 seconds
+
+2014-02-19 06:41:40,719 [DEBUG] 	MyProxy delegation:
+myproxy-init -d -n -s myproxy.cern.ch
+2014-02-19 06:41:40,743 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'cacheduration': 24, 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'conn': <httplib.HTTPSConnection instance at 0x1eb27cf8>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 24, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 24 hours, max reuse 24.0 hours)
+2014-02-19 06:41:40,744 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache/0_GET_people.json expired, refreshing cache
+2014-02-19 06:41:40,744 [DEBUG] 	getData: 
+	url: /sitedb/data/prod/people
+	data: {}
+2014-02-19 06:41:41,806 [DEBUG] 	Linux cmsphys02 2.6.18-371.3.1.el5 #1 SMP Fri Dec 6 08:34:45 CET 2013 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+Linux cmsphys02 2.6.18-371.3.1.el5 #1 SMP Fri Dec 6 08:34:45 CET 2013 x86_64 x86_64 x86_64 GNU/Linux
+ 
+Used properties:
+   CMSSW.datasetpath : /tH125q_blvYtMinus1_LHE_v1/meridian-tblv_H126to2tau_q_YtMinus1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1-96a2d094c26d96f79b9d2763d2436fbd/USER
+   CMSSW.dbs_url : https://cmsdbsprod.cern.ch:8443/cms_dbs_ph_analysis_02_writer/servlet/DBSServlet
+   CMSSW.events_per_job : 10000
+   CMSSW.output_file : cmgTuple.root
+   CMSSW.pset : PATCMG_notrig_cfg.py
+   CMSSW.total_number_of_events : 1000
+   CRAB.cfg : crab_tHq.cfg
+   CRAB.create : 
+   CRAB.jobtype : cmssw
+   CRAB.scheduler : glite
+   CRAB.submit : 
+   CRAB.use_server : 0
+   GRID.rb : CERN
+   GRID.se_black_list : T0,T1
+   USER.copy_data : 1
+   USER.return_data : 0
+   USER.storage_element : srm-eoscms.cern.ch
+   USER.storage_path : /srm/v2/server?SFN=/eos/cms
+   USER.user_remote_dir : /store/cmst3/user/ytakahas/CMG/Feb19/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1
+End of used properties.
+
+2014-02-19 06:41:42,025 [DEBUG] 	CMSSW::__init__
+2014-02-19 06:41:42,026 [DEBUG] 	Scram::Scram() version is 2
+2014-02-19 06:41:42,026 [DEBUG] 	Scram::Scram() arch is slc5_amd64_gcc462
+2014-02-19 06:41:42,026 [DEBUG] 	Downloading file [https://cmssdt.cern.ch/SDT/cgi-bin] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/ReleasesXML].
+2014-02-19 06:41:42,027 [DEBUG] 	Service initialised ({'endpoint': 'https://cmssdt.cern.ch/SDT/cgi-bin', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/SDT/cgi-bin/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'https://cmssdt.cern.ch/SDT/cgi-bin', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmssdt.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0x1e9df3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPSConnection instance at 0x1ecfc1b8>}, 'logger': <logging.Logger instance at 0x1e9df3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmssdt.cern.ch, basepath: /SDT/cgi-bin/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:42,027 [DEBUG] 	/afs/cern.ch/user/y/ytakahas/.cms_crab/0_GET_ReleasesXML expired, refreshing cache
+2014-02-19 06:41:42,027 [DEBUG] 	getData: 
+	url: /SDT/cgi-bin/ReleasesXML
+	data: {}
+2014-02-19 06:41:42,175 [DEBUG] 	ERROR: User defined PSet file PATCMG_notrig_cfg.py does not exist
+

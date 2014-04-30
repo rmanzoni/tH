@@ -1,0 +1,104 @@
+Test Release based on: CMSSW_5_3_14
+Base Release in: /afs/cern.ch/cms/slc5_amd64_gcc462/cms/cmssw/CMSSW_5_3_14
+Your Test release in: /afs/cern.ch/work/y/ytakahas/htautau_2014/CMSSW_5_3_14
+## gpetruc-CleanupProductionTools-CMG_PAT_V5_18_from-CMSSW_5_3_14
+cbdcafce6f77163e9509c8f6dd2218d830c61ff9 2013-10-23 08:21:43 -0700 Merge pull request #5 from steggema/htautau_cvs_updates  (HEAD, gpetruc-CleanupProductionTools-CMG_PAT_V5_18_from-CMSSW_5_3_14)
+fddf4a4640320151812bc98a657ad29adff8c4e2 2014-02-05 10:54:31 +0100 Fix error for non-tracking branches 
+8c0c2e4a6d0b2f3760505282673c935a2cfb32f0 2014-02-04 17:52:06 +0100 Feed some GIT information in the table of the tags 
+31917d4270543baf0c8f1b73e31132c6e1e6d375 2014-02-04 15:56:11 +0100 Remove more CVS operations, fill showtags with meaningful info 
+f3f4230b27df318d6af6c1f7cd0912ae895a9261 2014-02-04 12:57:18 +0100 Savannah-less and mostly CVS-less production tools (but still need to put a meaningful release number and maybe git branch in the logger) 
+978a91e3e79bdd4635d532420ab7f0dec52ed9b2 2014-02-04 09:40:02 +0100 remove CVS access 
+900db61abb7f7322228b702cf19bff750ee94271 2014-02-03 07:31:17 -0800 Merge pull request #11 from geonmo/CMG_PAT_v5_18_from-CMSSW_5_3_14 
+900db61abb7f7322228b702cf19bff750ee94271 2014-02-03 23:30:21 +0900 Fix typo. 
+c01faced96316fa0506fa57783cd77727af72695 2014-02-03 20:35:46 +0900 Modify RandomEngine service to new style for CRAB jobs. 
+3355688b1b9a490546b35c8377d890798a8980ad 2014-01-29 03:34:50 -0800 Merge pull request #8 from gpetruc/merging-TTHAnalysis  (YutaDevelopsForCMG_PAT_V5_18)
+12874e2dacfb66bb1d1aa8470b53205eec351fb3 2014-01-29 01:31:12 -0800 Merge pull request #7 from gpetruc/CMG_PAT_V5_18_from-CMSSW_5_3_14 
+3355688b1b9a490546b35c8377d890798a8980ad 2014-01-29 10:22:06 +0100 Merged TTHAnalysis (step 2: removing duplicated code, checking that ntuplizer works) 
+a7ffd4f7019750313dc864783e70e81c69d1a63c 2014-01-29 09:10:00 +0100 Merge TTHAnalysis_CMG_PAT_from-CMSSW_5_3_12_patch1 as of 29/01/2014 Note: this is just the dumb merge from GIT, I still have to modify it to remove duplications and to switch to the new RootTools 
+12874e2dacfb66bb1d1aa8470b53205eec351fb3 2014-01-28 19:03:21 +0100 RootTools: assorted set of generally-useful thins that where in TTHAnalysis 
+569d0fea6e3b59cade9022fd2986cac3f9f3a1ca 2014-01-28 18:44:02 +0100 Allow setting the raw factor, to recalibrate jets in python 
+538edd5c5d35eab6e00376f3d67362e3bbafb10f 2014-01-24 11:21:06 +0100 Limit the number of CPUs, not the number of tasks 
+d6a74b535ee9b2b4af174c8ade6aab83c5e4fc99 2014-01-24 11:18:23 +0100 Improved TreeNumpy with support for vector branches and for float branches instead of doubles 
+cae4da08076cee3c0fdb7c4af0b4a0b9069b1d87 2013-12-20 20:27:05 +0100 adding lightweight module for saving trigger prescale values 
+18feafdc1fc8a296239b34014cbfc5a570435d18 2013-12-20 20:02:46 +0100 module that can slim primary vertices by removing the references to the tracks 
+ff1a20459f775de82cd9d47420bca00cfa78437a 2013-12-20 19:48:52 +0100 minor fix to met filters in top level config 
+19c3dd92ce870d9dafe45c5cad4e3292552f1fbd 2013-12-19 06:40:18 -0800 Merge pull request #6 from gpetruc/lucie-met-for518 
+19c3dd92ce870d9dafe45c5cad4e3292552f1fbd 2013-12-19 15:25:33 +0100 more updates to filters 
+c07e94ce513e3c011d05a50300d7beff0958964d 2013-12-18 16:00:09 +0100 merge of Lucie's branch 
+0ecb2aaa621d9148fae5920c2354ed0014d4757a 2013-12-18 14:57:45 +0100 add commented out lines to keep the 16-bit candidates 
+49a093da8a9bed370f324acc8186f3b92641f878 2013-12-18 14:55:21 +0100 drom DiMuons and DiElectrons, keep cmg::Candidates of the cmgCandidates 
+85c8270d28a348792b4ba801307892a126628f2e 2013-12-18 14:54:38 +0100 cmg::PackedCandidate class with 16-bit datamembers 
+0e597f8d5ca4c8c2d29aa60855406608b89af5b4 2013-12-18 12:50:32 +0100 remove obsolete package EGamma/EGammaAnalysisTools from BuildFile.xml 
+3a9a6b55b5d07bb459c0b86a692e7566d178c062 2013-12-18 12:49:40 +0100 storing data as float in cmg::Candidate 
+98d5900e51633c2c8450e21e15096f02876aaa72 2013-12-18 12:38:28 +0100 reduce deltaR of isoDeposits, and drop unnecessary tev-muon embedded tracks 
+401deba6dd9a52b0d758e5ba57764658a79f7d96 2013-12-18 12:34:38 +0100 more useless xml 
+296a39c2b4693c62023904a69a49968a5f610557 2013-12-16 22:32:15 +0100 put MET filters back in main CFG, add EcalDeadCellBoundaryEnergyFilter. 
+532c1b57d3ed3af24f62222f129d008d5add8d75 2013-12-16 22:22:15 +0100 backport CSC Halo Filter from 6.2.X (in 5.3.X it is not in GIT) 
+2657f2a3595e9485ae56ccdd22e31516ea4c748a 2013-12-16 18:42:36 +0100 Fix electron p4 
+2097e593dd4a474f6a9abf8327043672e6f23fbc 2013-12-16 16:51:30 +0100 restore discriminators and add a few new ones from the new PAT 
+b4768cdfc1bbce0db17782d3ff40b79bac670582 2013-12-16 16:50:42 +0100 latest global tag 
+39289432d43102c56f510e7dcc20681d0ee1eb51 2013-12-16 16:33:44 +0100 Electron ID: gzip xml files 
+0b71d68ee10fca547227136abe1d834d0ae19d35 2013-12-16 14:13:02 +0100 remove obsolete PU JetID trainings 
+5c964532aa0623f67f7cb8d346e27dc86eeee957 2013-12-16 12:18:09 +0100 remove obsolete muon MVAs 
+3312647fa55fe59f9d8f4c449c1fae47fee6cf76 2013-12-16 11:57:41 +0100 Merging up to CMSSW 5_3_14 + latest PAT Recipe (cms-analysis-tools:5_3_14-updateSelectorUtils) 
+0325a6bf50093eb517629da191b9a7ed16fd0a36 2013-12-13 18:07:27 +0100 Add a few V5_15_0 samples for which there is no newer version 
+f57395969b2202c50c606f1e00b92fe9f762e848 2013-12-13 18:01:28 +0100 lost hits and full conv veto 
+6bcbedbaac27a9b369e9e88753d23b2a4b6462d2 2013-12-13 18:00:58 +0100 support for vector trees, change default tree name and lumi name 
+cedf147af8ec5b26e3c7e23c691a645175fc75e3 2013-12-13 17:53:11 +0100 lepton efficiencies, Wjj and Tjjb, forward jets, support for inclusive leptons and taus 
+82efc3522b11b0e0e043f9b048f47175a055c9ca 2013-12-13 16:56:33 +0100 Compute SFs for leptons here 
+4d875a5e04a2a23dcc53a19fb3c2400b07dc40e0 2013-12-13 16:55:50 +0100 inclusive taus 
+ed920215b64abec390909fa9d42ebb8ad6592d11 2013-12-13 16:55:21 +0100 alert if a jet is killed by JEC 
+5ebc6955f6bce853655f12dc10a234644fd2f226 2013-12-13 16:54:58 +0100 PU JetID fix for new samples 
+2b8b24df472deb8844670827ef45c09d835d8527 2013-12-13 15:34:28 +0100 CMGDB account fix (from Sezen) 
+d8c1cc832e1aaf2c8e6a58198d55148dc7ceb143 2013-12-13 15:34:28 +0100 CMGDB account fix (from Sezen) 
+c941c0c53a61b3d61b60a900160c741a783b263e 2013-12-12 21:56:27 +0100 Add ECAL regression 
+74326e1dcb5458c2a8e72f6c74d90360293ac998 2013-12-11 23:09:02 +0100 musclefit corrections (on by default, replacing the rochester ones) 
+7458f6609468e49162f461e500413d88d6e8cb73 2013-12-11 15:28:33 +0100 2012 ReReco data updates: - new PU weights - new lepton efficiency weights - new jet energy corrections - propagation of JECs to MET when shifting JEC up and down 
+4acbee3eed88036dd5c29d00b330ea98083880f0 2013-12-10 19:39:54 +0100 running on new samples 
+4be68db628b481463b40f69e8ee249aaa316145c 2013-12-10 19:34:05 +0100 allow more components interactively for testing, but capping the number of threads 
+69625d894c255be27bb0f0dbe079449138a458fc 2013-12-10 19:29:26 +0100 new samples 
+b15153722721795863001f1ad707d26b0fdad751 2013-12-06 18:13:00 +0100 Update to CVS-tag V00-03-34. 
+bd22c2557543f70f6dc3eb34118e325871bff95b 2013-12-04 19:00:19 +0100 Tau ID 
+6a76f3345d309359b39c906857a0b2a33e79e092 2013-12-04 17:51:37 +0100 use TW V5_17_0 input 
+2bafe9d25819d6f27ad14f240c775913151c9605 2013-12-03 17:02:24 +0100 refactor tree producer 
+0044850f0b50b7c9af63d48b3a87e199cdb3ff14 2013-12-03 13:45:58 +0100 fix typo in function that sorts jets 
+29b5fb6835de68a973e8c2ced8f51b43b6a49971 2013-12-03 13:45:03 +0100 TreeNumpy: remove debug printout 
+00c5bc4a684284c0b03aad24f0d17faef246cfff 2013-12-03 13:38:23 +0100 ntupleObjects: sorting also for vector ones 
+4e6614f3c0f2b9f4a58c2053db6ce419c5787f64 2013-12-03 13:24:59 +0100 port some ttH features to new tree producer 
+4d827a4df275ec087fcc174715b4dd7dd61774f5 2013-12-03 13:23:37 +0100 a few max m(ll), for consistency 
+f925dbf1377920c74e8ea9128cac2e8a864fb4c3 2013-12-03 13:22:57 +0100 ttHLepAnalyzerBase: make cuts configurable, save boolean for electron tight id 
+6a7648f1e422119f31f721de58ba7cf5443045ca 2013-12-03 13:21:55 +0100 ttHJetAnalyzer: allow option to clean from taus 
+3693ddcee72d9a093e8fadcadb8f2573042177ab 2013-12-03 13:21:04 +0100 ntupleObjects: allow sorting and filtering 
+59c4f5cc09c2e909127a39e868fd8ddf0344d038 2013-12-03 13:20:20 +0100 ttHTauAnalyzer: remove old IDs, make cuts configurable 
+385a7e1e47afa4ba9c74139b2b7eef8f6da31a0d 2013-12-03 12:25:36 +0100 support for fixed-size arrays 
+4cc3f1b789276d62f7004daec4e2392c8320200a 2013-11-30 18:58:22 +0100 Make the scale factor and friend tree producer run on the output of the new ntuplizer 
+0303f36367a2d37b323daffafeb89bcea5298bfa 2013-11-30 18:57:21 +0100 support for vector trees 
+feb780428a66b356d37d2c16bbb39876d1094249 2013-11-29 12:11:14 +0100 refactor away types from classes, more complete example 
+30db98e733ad6b5e5ac1a2f954dfa961a9947ba8 2013-11-29 12:10:40 +0100 Allow specifying the storage type 
+1082a00ee05f00ce4ea0f530417016d8072b3011 2013-11-28 17:48:13 +0100 test version of new ntuplizer supporting both scalars and vectors 
+5bad4eb2e5633fdbfbc005a37049a957a822dbc5 2013-11-28 17:47:31 +0100 support for vector branches, custom defaults and setting branch titles 
+857637934eb42258fd29fa67ba85500d53b167d4 2013-11-28 15:03:38 +0100 Make also 'universal' datacard valid for all masses 
+4ff78b2c2af1f5dd3dfca93514c8c263e0828c13 2013-11-26 08:09:33 -0800 Merge pull request #1597 from vlimant/fix-for-typo-in-dp-express-processing  (tag: CMSSW_5_3_X_2013-12-14-0200, tag: CMSSW_5_3_X_2013-12-13-1400, tag: CMSSW_5_3_X_2013-12-13-0200, tag: CMSSW_5_3_X_2013-12-12-1400, tag: CMSSW_5_3_X_2013-12-12-0200, tag: CMSSW_5_3_X_2013-12-11-1400, tag: CMSSW_5_3_X_2013-12-11-0200, tag: CMSSW_5_3_X_2013-12-10-1400, tag: CMSSW_5_3_X_2013-12-10-0200, tag: CMSSW_5_3_X_2013-12-09-1400, tag: CMSSW_5_3_X_2013-12-09-0200, tag: CMSSW_5_3_X_2013-12-08-1400, tag: CMSSW_5_3_X_2013-12-08-0200, tag: CMSSW_5_3_X_2013-12-07-0200, tag: CMSSW_5_3_X_2013-12-06-1400, tag: CMSSW_5_3_X_2013-12-06-0200, tag: CMSSW_5_3_X_2013-12-05-1400, tag: CMSSW_5_3_X_2013-12-05-0200, tag: CMSSW_5_3_X_2013-12-04-1400, tag: CMSSW_5_3_X_2013-12-04-0200, tag: CMSSW_5_3_X_2013-12-03-1400, tag: CMSSW_5_3_X_2013-12-03-0200, tag: CMSSW_5_3_X_2013-12-02-1400, tag: CMSSW_5_3_X_2013-12-02-0200, tag: CMSSW_5_3_X_2013-12-01-1400, tag: CMSSW_5_3_X_2013-12-01-0200, tag: CMSSW_5_3_X_2013-11-30-1400, tag: CMSSW_5_3_X_2013-11-30-0200, tag: CMSSW_5_3_X_2013-11-29-1400, tag: CMSSW_5_3_X_2013-11-29-0200, tag: CMSSW_5_3_X_2013-11-28-1400, tag: CMSSW_5_3_X_2013-11-28-0200, tag: CMSSW_5_3_X_2013-11-27-1400, tag: CMSSW_5_3_X_2013-11-27-0200, tag: CMSSW_5_3_14_LHAPDF590, tag: CMSSW_5_3_14, from-CMSSW_5_3_14, CMSSW_7_0_X)
+093f74cb326306643f2d134ea1c34a1235e7ea51 2013-11-26 15:46:54 +0100 fix typo for express processing file type switch 
+7ff12ebe1695af7c5f6f5ef86c42977a24f00b72 2013-11-26 00:51:29 -0800 Merge pull request #1407 from ingabu/Adding-MC-PU-reweighting  (tag: CMSSW_5_3_X_2013-11-26-1400)
+f8da9fe55050ff934cada1ae653446f4d4050fe5 2013-11-22 11:57:42 -0800 Merge pull request #1408 from inugent/ValidationZXPatch  (tag: CMSSW_5_3_X_2013-11-26-0200, tag: CMSSW_5_3_X_2013-11-25-1400, tag: CMSSW_5_3_X_2013-11-25-0200, tag: CMSSW_5_3_X_2013-11-24-1400, tag: CMSSW_5_3_X_2013-11-24-0200, tag: CMSSW_5_3_X_2013-11-23-1400, tag: CMSSW_5_3_X_2013-11-23-0200)
+fc72f949fe58ecaa640c9e87caaa946e8bb3dd57 2013-11-22 11:56:30 -0800 Merge pull request #1472 from veelken/from-CMSSW_5_3_X_2013-11-08-1400 
+5d6241ec507e8b2e4bd95745a36a899ac11b49c1 2013-11-22 11:55:52 -0800 Merge pull request #1482 from veelken/5_3_X_PFJetIDSelectionFunctor_fix 
+1a90390000773db0a127ff814087b19af74258dc 2013-11-22 11:55:25 -0800 Merge pull request #1542 from Dr15Jones/cmsRunReturnNoneroOnSignalFor5_3_X 
+70055df708097b0a13206d3715fb0954e592d140 2013-11-22 11:55:00 -0800 Merge pull request #1545 from vadler/53X-fixJetTools 
+db974f72ce8a371edeb1999488a34d617bd9df71 2013-11-22 13:13:48 -0600 Fixing lepton double counting 
+8fdd63c3251482dfc2d5be94ff574ce7ea92e24b 2013-11-22 13:13:41 -0600 Fixing lepton double counting 
+bb2031a6e92443bb3c2c73476b286c17f5540313 2013-11-22 13:13:14 -0600 Fixing lepton double counting 
+fcfab008f2428ff892949deac7f94020ee789362 2013-11-22 13:12:16 -0600 Fixing lepton double counting 
+69c7c4ebb7675fb2ad49a6938acfb32809316f96 2013-11-22 13:11:49 -0600 First commit 
+8497c4a0cc50c585278eb2b3ea14e42d097a6ef8 2013-11-22 13:09:59 -0600 Fixing lepton double counting 
+ce45d19996495e6d3657a214fa5b5e79010103fe 2013-11-22 13:09:54 -0600 Fixing lepton double counting 
+9aacd1dc1731570451bb1e40ec565e8388ab0328 2013-11-22 13:09:48 -0600 Fixing lepton double counting 
+d9248643c48d9d486f9fa3a011342028ccc3149e 2013-11-22 13:09:06 -0600 Fixing lepton double counting 
+d1ddf602e225221e33c95ef2d60ee7d4eb39dbf4 2013-11-22 13:08:50 -0600 Fixing lepton double counting 
+70055df708097b0a13206d3715fb0954e592d140 2013-11-21 04:43:40 +0100 Fix rho collection for L1FastJet. 
+56c3e4e5752bfd6951aa525767961f04e907ba73 2013-11-20 14:51:35 -0600 cmsRun returns non-zero if caught unix signal 
+92b15ec24f7bd1ba2dca43e9796e894a45512616 2013-11-19 03:38:00 -0800 Merge pull request #1364 from blinkseb/53x_winter13_btag_db  (tag: CMSSW_5_3_X_2013-11-22-1400, tag: CMSSW_5_3_X_2013-11-22-0200, tag: CMSSW_5_3_X_2013-11-21-1400, tag: CMSSW_5_3_X_2013-11-21-0200, tag: CMSSW_5_3_X_2013-11-20-1400, tag: CMSSW_5_3_X_2013-11-20-0200, tag: CMSSW_5_3_X_2013-11-19-1400, tag: CMSSW_5_3_13_patch3)
+dbd5f5d5f4459c16651f4f1f0132bc2a7e9d38b3 2013-11-19 03:37:47 -0800 Merge pull request #1456 from vciulli/add_dec_files 
+e4849b9fbdea4e9d1d3d540921055ab52476c8c2 2013-11-19 03:37:19 -0800 Merge pull request #1458 from vciulli/remove_REPLACE 
+1544d911f557ffb0b166c3832a6ec5ec5ca72bb3 2013-11-16 10:35:15 +0100 cvs version 1.23 (fixes computation of jet energy fractions in case JEC are applied to jet four-vector) 

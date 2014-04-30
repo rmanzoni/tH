@@ -1,0 +1,32 @@
+import CMGTools.RootTools.fwlite.Config as cfg
+
+
+tH_Yt1 = cfg.MCComponent(
+    name = 'tH_Yt1',
+    files = [
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_Yt1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_1.root',
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_Yt1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_2.root', 
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_Yt1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_3.root'],
+    xSection = 0.01796, #PG from twiki: https://twiki.cern.ch/twiki/bin/viewauth/CMS/HiggsToTauTauWorkingSummer2012#MC_samples_and_cross_sections
+    nGenEvents = 97986,
+    triggers = ['HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v*', 'HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v*', 'HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7', 'HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7'],
+    effCorrFactor = 1 )
+
+
+tH_Ytminus1 = cfg.MCComponent(
+    name = 'tH_Ytminus1',
+    files = [
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_1.root',
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_2.root',
+    'root://eoscms//eos/cms/store/cmst3/group/htautau/CMG/Aug01/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6-TuneZ2Star-PU_S10_START53_V7A_v1/EMuTau_Yuta_Feb3/cmgTuple_3.root'],
+    xSection = 0.231, #PG from twiki: https://twiki.cern.ch/twiki/bin/viewauth/CMS/HiggsToTauTauWorkingSummer2012#MC_samples_and_cross_sections
+    nGenEvents = 118986,
+    triggers = ['HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v*', 'HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v*', 'HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7', 'HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7'],
+    effCorrFactor = 1 )
+
+
+
+mc_tH = [
+    tH_Yt1,
+    tH_Ytminus1
+    ]

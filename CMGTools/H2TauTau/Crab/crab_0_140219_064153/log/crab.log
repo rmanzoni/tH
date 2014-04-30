@@ -1,0 +1,42 @@
+2014-02-19 06:41:54,191 [DEBUG] 	/afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_10_3/python/crab.py -cfg crab_tHq.cfg -create -submit
+
+2014-02-19 06:41:54,192 [INFO] 	Version 2.10.3 running on Wed Feb 19 06:41:54 2014 CET (05:41:54 UTC)
+
+crab. Working options:
+	scheduler           glite
+	job type            CMSSW
+	server              OFF
+	working directory   /afs/cern.ch/work/y/ytakahas/htautau_2014/CMSSW_5_3_14/src/CMGTools/H2TauTau/Crab/crab_0_140219_064153/
+
+2014-02-19 06:41:54,192 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/allowed_releases.conf].
+2014-02-19 06:41:54,192 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0xaaed3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0xaaed638>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,237 [DEBUG] 	Downloading config files for WMS: http://cmsdoc.cern.ch/cms/LCG/crab/config/
+2014-02-19 06:41:54,238 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/glite_wms_CERN.conf].
+2014-02-19 06:41:54,239 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0xaaed3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0xac37488>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,253 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0xaaed3f8>, 'conn': <httplib.HTTPSConnection instance at 0xac37440>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,253 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0xaaed3f8>, 'conn': <httplib.HTTPSConnection instance at 0xac37488>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,253 [DEBUG] 	Input whitelist: 
+2014-02-19 06:41:54,253 [DEBUG] 	Input blacklist: T0, T1
+2014-02-19 06:41:54,376 [DEBUG] 	Converted whitelist: 
+2014-02-19 06:41:54,376 [DEBUG] 	Converted blacklist: srm-cms-mss.jinr-t1.ru, srm-cms.cern.ch, cmssrm.fnal.gov, srm-cms.gridpp.rl.ac.uk, srm-cms.jinr-t1.ru, cmssrm-kit.gridka.de, storm-fe-cms.cr.cnaf.infn.it, cmssrmdisk.fnal.gov, srmcms.pic.es, srm-cms-disk.gridpp.rl.ac.uk, ccsrm.in2p3.fr, srm-eoscms.cern.ch, srm2.grid.sinica.edu.tw
+2014-02-19 06:41:54,377 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/myproxy_server.conf].
+2014-02-19 06:41:54,377 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0xaaed3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0xac30908>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,377 [DEBUG] 	Downloading file [http://cmsdoc.cern.ch/cms/LCG/crab/config/] to [/afs/cern.ch/user/y/ytakahas/.cms_crab/site_black_list.conf].
+2014-02-19 06:41:54,377 [DEBUG] 	Service initialised ({'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'basepath': '/cms/LCG/crab/config/', 'method': None, 'timeout': 20, 'requests': {'endpoint': 'http://cmsdoc.cern.ch/cms/LCG/crab/config/', 'timeout': 20, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_crab', 'cacheduration': 0.5, 'host': 'cmsdoc.cern.ch', 'accept_type': 'text/html', 'content_type': 'application/x-www-form-urlencoded', 'logger': <logging.Logger instance at 0xaaed3f8>, 'type': 'txt/csv', 'conn': <httplib.HTTPConnection instance at 0xac30908>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 0.5, 'type': 'txt/csv', 'inputdata': {}}):
+	 host: cmsdoc.cern.ch, basepath: /cms/LCG/crab/config/ (text/html)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_crab (duration 0.5 hours, max reuse 24.0 hours)
+2014-02-19 06:41:54,378 [DEBUG] 	Enforced black list: TAPE,srm-cms.cern.ch,T1_ES,T1_FR,T1_RU,T1_TW,cmsdca2.fnal.gov,T2_PK_NCP,T3_US_Vanderbilt_EC2
+ 
+2014-02-19 06:41:54,614 [DEBUG] 	Service initialised ({'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'content_type': 'application/json', 'maxcachereuse': 24.0, 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'basepath': '/sitedb/data/prod/', 'method': None, 'accept_type': 'application/json', 'timeout': 30, 'requests': {'endpoint': 'https://cmsweb.cern.ch/sitedb/data/prod/', 'cachepath': '/afs/cern.ch/user/y/ytakahas/.cms_sitedbcache', 'cacheduration': 24, 'host': 'cmsweb.cern.ch', 'accept_type': 'application/json', 'content_type': 'application/json', 'logger': <logging.Logger instance at 0xaaed3f8>, 'conn': <httplib.HTTPSConnection instance at 0xac30a70>}, 'logger': <logging.Logger instance at 0xaaed3f8>, 'cacheduration': 24, 'inputdata': {}}):
+	 host: cmsweb.cern.ch, basepath: /sitedb/data/prod/ (application/json)
+	 cache: /afs/cern.ch/user/y/ytakahas/.cms_sitedbcache (duration 24 hours, max reuse 24.0 hours)

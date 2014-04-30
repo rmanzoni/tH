@@ -1,0 +1,72 @@
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr1-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr2-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr3-s.cern.ch)(PORT=10121))(LOAD_BALANCE=on)(ENABLE=BROKEN)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=cmsr_lb.cern.ch)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=200)(DELAY=15))(CID=(PROGRAM=python)(HOST=cmsphys02)(USER=ytakahas))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 11.2.0.3.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 11.2.0.3.0 - Production
+  Time: 27-FEB-2014 10:21:29
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: Message 12564 not found; No message file for product=network, facility=TNS
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr1-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr2-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr3-s.cern.ch)(PORT=10121))(LOAD_BALANCE=on)(ENABLE=BROKEN)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=cmsr_lb.cern.ch)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=200)(DELAY=15))(CID=(PROGRAM=python)(HOST=lxplus425.cern.ch)(USER=ytakahas))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 11.2.0.3.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 11.2.0.3.0 - Production
+  Time: 27-FEB-2014 10:21:50
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: Message 12564 not found; No message file for product=network, facility=TNS
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr1-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr2-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr3-s.cern.ch)(PORT=10121))(LOAD_BALANCE=on)(ENABLE=BROKEN)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=cmsr_lb.cern.ch)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=200)(DELAY=15))(CID=(PROGRAM=python)(HOST=lxplus429.cern.ch)(USER=ytakahas))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 11.2.0.3.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 11.2.0.3.0 - Production
+  Time: 27-FEB-2014 11:45:36
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: Message 12564 not found; No message file for product=network, facility=TNS
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr1-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr2-s.cern.ch)(PORT=10121))(ADDRESS=(PROTOCOL=TCP)(HOST=cmsr3-s.cern.ch)(PORT=10121))(LOAD_BALANCE=on)(ENABLE=BROKEN)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=cmsr_lb.cern.ch)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=200)(DELAY=15))(CID=(PROGRAM=python)(HOST=lxplus425.cern.ch)(USER=ytakahas))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 11.2.0.3.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 11.2.0.3.0 - Production
+  Time: 27-FEB-2014 11:59:59
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: Message 12564 not found; No message file for product=network, facility=TNS
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
