@@ -1,0 +1,2 @@
+/tblv_H126to2tau_q_Yt1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb6 htautau_group
+/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb6 htautau_group

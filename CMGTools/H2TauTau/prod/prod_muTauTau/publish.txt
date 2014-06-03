@@ -1,0 +1,1 @@
+/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/MuTauTau_Yuta_Feb28 htautau_group
