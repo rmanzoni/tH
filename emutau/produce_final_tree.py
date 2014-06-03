@@ -6,6 +6,8 @@ import numpy as n
 from Utils import *
 from fake_bkg_estimation import fake_bkg_estimation as fb
 
+ROOT.gROOT.SetBatch(True)
+
 class final_tree( object ) : 
   '''
   Merges the trees for different components, including fakes, into a single one.
