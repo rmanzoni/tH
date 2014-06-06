@@ -45,6 +45,12 @@ process.source = datasetToSource(
     dataset_files,
     )
 
+process.source.inputCommands=cms.untracked.vstring(
+  'keep *',
+  'drop *_PFCandidates_*_*',
+  'drop *_cmgCandidates_*_*',
+   )
+
 # restricting the number of files to process to a given number
 if numberOfFilesToProcess>0:
     process.source.fileNames = process.source.fileNames[:numberOfFilesToProcess]
