@@ -174,7 +174,7 @@ treeProducer = cfg.Analyzer(
 
 #########################################################################################
 # sample definition
-from CMGTools.H2TauTau.proto.samples.run2012.emuTau_YutaFeb12 import *
+from CMGTools.H2TauTau.proto.samples.run2012.emuTau_RicJun6 import *
 #########################################################################################
 
 for mc in MC_list:
