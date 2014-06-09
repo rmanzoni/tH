@@ -9,7 +9,7 @@ from CMGTools.RootTools.RootTools import *
 
 # set True when you want to throw the jobs
 # jobmode = True
-jobmode = False
+jobmode  = False
 selector = False
 
 if jobmode:
@@ -221,7 +221,20 @@ if jobmode:
 
 if not jobmode:
     for comp in selectedComponents:
-        comp.splitFactor = 8
+        comp.splitFactor = 80
+
+selectedComponents =  [tH_YtMinus1, TTJetsSemiLept]
+selectedComponents =  [TTJetsSemiLept]
+# selectedComponents =  [tH_YtMinus1]
+
+tH_YtMinus1.puFileMC      = puFileMC
+tH_YtMinus1.puFileData    = puFileData
+TTJetsSemiLept.puFileMC   = puFileMC
+TTJetsSemiLept.puFileData = puFileData
+
+# sequence.remove(triggerAna) ## for tH signal only
+
+# import pdb ; pdb.set_trace()
 
 config = cfg.Config( components = selectedComponents,
                      sequence = sequence )

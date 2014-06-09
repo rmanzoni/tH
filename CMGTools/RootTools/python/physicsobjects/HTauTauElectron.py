@@ -3,7 +3,7 @@ from ROOT import gSystem, AutoLibraryLoader
 gSystem.Load("libFWCoreFWLite")
 AutoLibraryLoader.enable()
 gSystem.Load("libDataFormatsRecoCandidate.so")
- 
+
 from ROOT import reco
 
 class HTauTauElectron( Electron ):
@@ -12,7 +12,7 @@ class HTauTauElectron( Electron ):
         super(HTauTauElectron, self).__init__(*args, **kwargs)
         self.photonIsoCache = None
         self.chargedAllIsoCache = None
-        
+
     def photonIso(self):
         if self.photonIsoCache is None:
             myVetoes = reco.IsoDeposit.Vetos()
@@ -39,7 +39,7 @@ class HTauTauElectron( Electron ):
             self.chargedAllIsoCache = iso
         return self.chargedAllIsoCache
 
-    
+
     def relaxedIdForEleTau(self):
         """Relaxing conversion cuts for sideband studies
         """
@@ -55,9 +55,9 @@ class HTauTauElectron( Electron ):
 
         https://twiki.cern.ch/twiki/bin/view/CMS/HiggsToTauTauWorking2012#2012_Baseline_Selection
         """
-        
+
         if self.numberOfHits() != 0: return False
-        if not self.passConversionVeto(): return False        
+        if not self.passConversionVeto(): return False
         eta = abs( self.sourcePtr().superCluster().eta() )
 
         # Update Jan: Deleted the old numbers which are for e-mu, the ones below
@@ -69,7 +69,7 @@ class HTauTauElectron( Electron ):
         result = self.mvaNonTrigV0()  > lmvaID
         #self.tightIdResult = result
         return result
-    
+
 
     def looseIdForTriLeptonVeto(self):
         '''To be used in the tri-lepton veto for both the etau and mutau channels.
@@ -91,14 +91,49 @@ class HTauTauElectron( Electron ):
             else :          lmvaID = 0.975
         result = self.mvaNonTrigV0()  > lmvaID
         return result
-        
+
+
+
+    def mvaForLeptonVeto(self):
+        '''To be used in the tri-lepton veto for both the etau and mutau channels.
+        Agreed at the CMS center with Josh, Andrew, Valentina, Jose on the 22nd of October
+        '''
+
+        eta = abs( self.sourcePtr().superCluster().eta() )
+        #Colin no eta cut should be done here.
+        #        if eta > 2.1 : return False
+        lmvaID = -99999 # identification
+        if self.pt() < 20 :
+            if   eta<0.8:   lmvaID = 0.925
+            elif eta<1.479: lmvaID = 0.915
+            else :          lmvaID = 0.965
+        else:
+            if   eta<0.8:   lmvaID = 0.905
+            elif eta<1.479: lmvaID = 0.955
+            else :          lmvaID = 0.975
+        result = self.mvaNonTrigV0()  > lmvaID
+        return result
+
+
+    def loosestIdForTriLeptonVeto(self):
+        '''To be used in the tri-lepton veto for both the etau and mutau channels.
+        Agreed at the CMS center with Josh, Andrew, Valentina, Jose on the 22nd of October
+        '''
+
+#        print 'check_loosest', self.sourcePtr().gsfTrack().trackerExpectedHitsInner().numberOfHits(), self.numberOfHits()
+#        print 'eYuta', self.passConversionVeto(), self.sourcePtr().userFloat("hasConversion"), self.sourcePtr().get().passConversionVeto()
+        if self.numberOfHits() != 0: return False
+#        if self.sourcePtr().userFloat("hasConversion"): return False
+        if not self.passConversionVeto(): return False
+        return True
+
 
     def tightId( self ):
         return self.tightIdForEleTau()
-        
+
 
     def looseIdForEleTau(self):
-        """Loose electron selection, for the lepton veto, 
+        """Loose electron selection, for the lepton veto,
         according to Phil sync prescription for the sync exercise 18/06/12
         """
         #COLIN inner hits and conversion veto not on the twiki
@@ -117,16 +152,16 @@ class HTauTauElectron( Electron ):
         # print sihih
         if self.sourcePtr().isEB() :
             if sihih >= 0.010     : return False
-            if dphi  >= 0.80      : return False 
+            if dphi  >= 0.80      : return False
             if deta  >= 0.007     : return False
             if hoe   >= 0.15      : return False
         elif self.sourcePtr().isEE() :
             if sihih >= 0.030     : return False
-            if dphi  >= 0.70      : return False 
+            if dphi  >= 0.70      : return False
             if deta  >= 0.010     : return False
     #            if hoe   >= 0.07      : return False
         else : return False #PG is this correct? does this take cracks into consideration?
-        return True    
+        return True
 
     def __str__(self):
         base = [super(HTauTauElectron, self).__str__()]
