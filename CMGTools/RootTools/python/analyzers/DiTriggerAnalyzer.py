@@ -11,10 +11,10 @@ class DiTriggerAnalyzer( Analyzer ):
     def declareHandles(self):
         super(DiTriggerAnalyzer, self).declareHandles()
 
-        self.handles['cmgTriggerObjectSel'] =  AutoHandle(
-            'cmgTriggerObjectSel',
-            'std::vector<cmg::TriggerObject>'
-            )
+#         self.handles['cmgTriggerObjectSel'] =  AutoHandle(
+#             'cmgTriggerObjectSel',
+#             'std::vector<cmg::TriggerObject>'
+#             )
 
         self.handles['cmgTriggerObjectListSel'] =  AutoHandle(
             'cmgTriggerObjectListSel',
@@ -65,8 +65,6 @@ class DiTriggerAnalyzer( Analyzer ):
         usePrescaled = False
         if hasattr( self.cfg_ana, 'usePrescaled'):
             usePrescaled = self.cfg_ana.usePrescaled
-
-        # import pdb; pdb.set_trace()
 
         ### want to check whether more than one unprescaled trigger has been fired
         hltPathVec = []

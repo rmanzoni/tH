@@ -1,7 +1,7 @@
 import os
 import re
 
-from CMGTools.RootTools.statistics.Counter import Counter 
+from CMGTools.RootTools.statistics.Counter import Counter
 from CMGTools.RootTools.utils.triggerevo import Menus
 from CMGTools.RootTools.utils.TriggerJSON import TriggerJSON
 from CMGTools.RootTools.utils.RLTInfo import RLTInfo
@@ -56,18 +56,17 @@ class TriggerList( object ):
                 print 'run', run, ': no path from the user list found in the list of unprescaled paths from the trigger DB. The latter could be wrong, using the user trigger list.'
             self.restrictedTriggerList = self.triggerList
         return self.restrictedTriggerList
-        
-    def triggerPassed(self, triggerObject, run, lumi, 
-                      isData, usePrescaled=False):
+
+    def triggerPassed(self, triggerObject, run, lumi,
+                      isData, isEmbed, usePrescaled=False):
         '''returns true if at least one of the triggers in the triggerlist passes.
 
         run is provided to call restrictList.
         if usePrescaled is False (DEFAULT), only the unprescaled triggers are considered.
         if triggerList is None (DEFAULT), oneself triggerlist is used. '''
-
         triggerList = self.triggerList
         if isData:
-            triggerList = self.restrictList( run, self.triggerList ) 
+            triggerList = self.restrictList( run, self.triggerList )
         if len(triggerList)==0:
             # no trigger specified, accepting all events
             return True, None
@@ -112,7 +111,7 @@ class TriggerList( object ):
                     trigWithLowestPrescale = name
         return trigWithLowestPrescale, maxPrescale
 
-                    
+
     def write(self, dirName ):
         self.triggerJSON.write( dirName )
         self.rltInfo.write( dirName )
@@ -129,7 +128,7 @@ class TriggerList( object ):
         triggerJSON = str( self.triggerJSON)
         return ':\n'.join( [head, triggers, triggerJSON] )
 
-        
+
 if __name__ == '__main__':
     list = ['HLT_IsoMu15_eta2p1_LooseIsoPFTau20_v[5,6]','HLT_IsoMu15_LooseIsoPFTau15_v9']
     trigList = TriggerList( list )
