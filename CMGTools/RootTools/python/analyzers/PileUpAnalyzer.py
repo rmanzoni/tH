@@ -1,4 +1,4 @@
-import os 
+import os
 from CMGTools.RootTools.analyzers.VertexHistograms import VertexHistograms
 from CMGTools.RootTools.fwlite.Analyzer import Analyzer
 from CMGTools.RootTools.fwlite.AutoHandle import AutoHandle
@@ -10,25 +10,25 @@ class PileUpAnalyzer( Analyzer ):
     '''Computes pile-up weights for MC from the pile up histograms for MC and data.
     These histograms should be set on the components as
     puFileData, puFileMC attributes, as is done here:
-    
+
     http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/UserCode/CMG/CMGTools/H2TauTau/Colin/test_tauMu_2012_cfg.py?view=markup
 
     THESE HISTOGRAMS MUST BE CONSISTENT, SEE
     https://twiki.cern.ch/twiki/bin/view/CMS/CMGToolsPileUpReweighting#Generating_pile_up_distributions
 
     If the component is not MC, or if the puFileData and puFileMC are not
-    set for the component, the reweighting is not done. 
-    
+    set for the component, the reweighting is not done.
+
     The analyzer sets event.vertexWeight.
     This weight is multiplied to the global event weight, event.eventWeight.
     When using this analyzer, make sure that the VertexAnalyzer is disabled,
     as you would be reweighting the MC PU distribution twice!
-    
+
     Additionally, this analyzer writes in the output an histogram containing the unweighting MC
-    pile-up distribution, to be used in input of the weighting for a later pass. 
-    
-    Example of use: 
-    
+    pile-up distribution, to be used in input of the weighting for a later pass.
+
+    Example of use:
+
     puAna = cfg.Analyzer(
       "PileUpAnalyzer",
       # build unweighted pu distribution using number of pile up interactions if False
@@ -55,7 +55,7 @@ class PileUpAnalyzer( Analyzer ):
         if self.cfg_comp.isEmbed :
           self.cfg_comp.puFileMC   = None
           self.cfg_comp.puFileData = None
-          
+
         if self.cfg_comp.isMC or self.cfg_comp.isEmbed:
             if self.cfg_comp.puFileMC is None and self.cfg_comp.puFileData is None:
                 self.enable = False
@@ -82,12 +82,17 @@ class PileUpAnalyzer( Analyzer ):
         super(PileUpAnalyzer, self).declareHandles()
         self.mchandles['pusi'] =  AutoHandle(
             'addPileupInfo',
-            'std::vector<PileupSummaryInfo>' 
-            ) 
+            'std::vector<PileupSummaryInfo>'
+            )
+#         self.handles['vertices'] =  AutoHandle(
+#             self.allVertices,
+#             'std::vector<reco::Vertex>'
+#             )
         self.handles['vertices'] =  AutoHandle(
-            self.allVertices,
-            'std::vector<reco::Vertex>' 
-            ) 
+            'slimmedPrimaryVertices',
+            'std::vector<reco::Vertex>'
+            )
+
 
     def beginLoop(self):
         super(PileUpAnalyzer,self).beginLoop()
@@ -136,11 +141,11 @@ class PileUpAnalyzer( Analyzer ):
                     event.vertexWeight = data/mc
                 else:
                     event.vertexWeight = 1
-                
+
         event.eventWeight *= event.vertexWeight
         self.averages['vertexWeight'].add( event.vertexWeight )
         return True
-        
+
     def write(self):
         super(PileUpAnalyzer, self).write()
         if self.cfg_comp.isMC and self.doHists:

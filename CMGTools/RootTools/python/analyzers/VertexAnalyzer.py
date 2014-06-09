@@ -14,16 +14,16 @@ class VertexAnalyzer( Analyzer ):
     if no good vertex is found, the process function returns False.
 
     The weight is put in event.vertexWeight, and is multiplied to
-    the global event weight, event.eventWeight. 
+    the global event weight, event.eventWeight.
 
     Example:
-    
+
     vertexAna = cfg.Analyzer(
       'VertexAnalyzer',
       goodVertices = 'goodPVFilter',
       vertexWeight = 'vertexWeightFall112011AB',
       # uncomment the following line if you want a vertex weight = 1 (no weighting)
-      # fixedWeight = 1, 
+      # fixedWeight = 1,
       verbose = False
       )
 
@@ -32,13 +32,13 @@ class VertexAnalyzer( Analyzer ):
     Otherwise, the weight is set to fixedWeight.
 
     The vertex weight collection was at some point produced in the PAT+CMG step,
-    and could directly be accessed from the PAT or CMG tuple. 
+    and could directly be accessed from the PAT or CMG tuple.
     In the most recent versions of the PAT+CMG tuple, this collection is not present anymore,
     and an additional full framework process must be ran to produce this collection,
     so that this analyzer can read it. An example cfg to do that can be found here:
     http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/UserCode/CMG/CMGTools/H2TauTau/prod/vertexWeight2011_cfg.py?view=markup
 
-    
+
     """
 
     def __init__(self, cfg_ana, cfg_comp, looperName):
@@ -47,16 +47,20 @@ class VertexAnalyzer( Analyzer ):
         self.doHists=True
         if (hasattr(self.cfg_ana,'makeHists')) and (not self.cfg_ana.makeHists):
             self.doHists=False
-        if self.doHists:    
+        if self.doHists:
             self.pileup = VertexHistograms('/'.join([self.dirName,
                                                      'pileup.root']))
-        
+
         self.allVertices = self.cfg_ana.allVertices if (hasattr(self.cfg_ana,'allVertices')) else "offlinePrimaryVertices"
 
     def declareHandles(self):
         super(VertexAnalyzer, self).declareHandles()
+#         self.handles['vertices'] =  AutoHandle(
+#             self.allVertices,
+#             'std::vector<reco::Vertex>'
+#             )
         self.handles['vertices'] =  AutoHandle(
-            self.allVertices,
+            'slimmedPrimaryVertices', ## for >= 5_18_0
             'std::vector<reco::Vertex>'
             )
         self.fixedWeight = None
@@ -69,13 +73,13 @@ class VertexAnalyzer( Analyzer ):
 
         self.mchandles['pusi'] =  AutoHandle(
             'addPileupInfo',
-            'std::vector<PileupSummaryInfo>' 
-            )        
+            'std::vector<PileupSummaryInfo>'
+            )
 
         self.handles['rho'] =  AutoHandle(
             ('kt6PFJets','rho'),
-            'double' 
-            )        
+            'double'
+            )
 
     def beginLoop(self):
         super(VertexAnalyzer,self).beginLoop()
@@ -85,7 +89,7 @@ class VertexAnalyzer( Analyzer ):
         self.count.register('All Events')
         self.count.register('Events With Good Vertex')
 
-        
+
     def process(self, iEvent, event):
         self.readCollections( iEvent )
         event.rho = self.handles['rho'].product()[0]
@@ -95,7 +99,7 @@ class VertexAnalyzer( Analyzer ):
 
         self.count.inc('All Events')
 
-        
+
         event.vertexWeight = 1
         if self.cfg_comp.isMC:
             event.pileUpInfo = map( PileUpSummaryInfo,
@@ -105,7 +109,7 @@ class VertexAnalyzer( Analyzer ):
             else:
                 event.vertexWeight = self.fixedWeight
         event.eventWeight *= event.vertexWeight
-            
+
         self.averages['vertexWeight'].add( event.vertexWeight )
         if self.verbose:
             print 'VertexAnalyzer: #vert = ', len(event.vertices), \
@@ -139,7 +143,7 @@ class VertexAnalyzer( Analyzer ):
             return False
         if vertex.position().Rho()>2:
             return False
-     
+
         return True
 
     def mindist(self, vertices):
@@ -149,7 +153,7 @@ class VertexAnalyzer( Analyzer ):
             if dist<mindist:
                 mindist = dist
         return mindist
-                                                                 
+
     def write(self):
         super(VertexAnalyzer, self).write()
         if self.doHists:
