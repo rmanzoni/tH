@@ -13,7 +13,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
     '''Tree producer for the H->tau tau analysis.
 
     Some of the functions in this class should be made available to everybody.'''
-    
+
     def declareVariables(self):
 
        tr = self.tree
@@ -21,7 +21,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
        var( tr, 'run', int)
        var( tr, 'lumi', int)
        var( tr, 'evt', int)
-       var( tr, 'rho')      
+       var( tr, 'rho')
        var( tr, 'pfmet')
        var( tr, 'pfmetphi')
        var( tr, 'weight')
@@ -65,7 +65,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
        var(etr, 'electron_mass')
        var(etr, 'electron_reliso')
        var(etr, 'electron_trigmatch')
-       
+
        ttr = self.ttree
        bookParticle(ttr, 'tau')
        var(ttr, 'tau_id')
@@ -95,6 +95,51 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
 #       var(ttr, 'tau_againstE0Cat')
        var(ttr, 'dBisolation')
 
+       ## RM new TauIDs
+       var(ttr, 'byIsolationMVA3oldDMwoLTraw'    )
+       var(ttr, 'byLooseIsolationMVA3oldDMwoLT'  )
+       var(ttr, 'byMediumIsolationMVA3oldDMwoLT' )
+       var(ttr, 'byTightIsolationMVA3oldDMwoLT'  )
+       var(ttr, 'byVTightIsolationMVA3oldDMwoLT' )
+       var(ttr, 'byVVTightIsolationMVA3oldDMwoLT')
+
+       var(ttr, 'byIsolationMVA3oldDMwLTraw'     )
+       var(ttr, 'byLooseIsolationMVA3oldDMwLT'   )
+       var(ttr, 'byMediumIsolationMVA3oldDMwLT'  )
+       var(ttr, 'byTightIsolationMVA3oldDMwLT'   )
+       var(ttr, 'byVTightIsolationMVA3oldDMwLT'  )
+       var(ttr, 'byVVTightIsolationMVA3oldDMwLT' )
+
+       var(ttr, 'byIsolationMVA3newDMwoLTraw'    )
+       var(ttr, 'byLooseIsolationMVA3newDMwoLT'  )
+       var(ttr, 'byMediumIsolationMVA3newDMwoLT' )
+       var(ttr, 'byTightIsolationMVA3newDMwoLT'  )
+       var(ttr, 'byVTightIsolationMVA3newDMwoLT' )
+       var(ttr, 'byVVTightIsolationMVA3newDMwoLT')
+
+       var(ttr, 'byIsolationMVA3newDMwLTraw'     )
+       var(ttr, 'byLooseIsolationMVA3newDMwLT'   )
+       var(ttr, 'byMediumIsolationMVA3newDMwLT'  )
+       var(ttr, 'byTightIsolationMVA3newDMwLT'   )
+       var(ttr, 'byVTightIsolationMVA3newDMwLT'  )
+       var(ttr, 'byVVTightIsolationMVA3newDMwLT' )
+
+       var(ttr, 'againstMuonLoose3'   )
+       var(ttr, 'againstMuonTight3'   )
+       var(ttr, 'againstMuonMVALoose' )
+       var(ttr, 'againstMuonMVAMedium')
+       var(ttr, 'againstMuonMVATight' )
+
+       var(ttr, 'againstElectronLoose'     )
+       var(ttr, 'againstElectronMedium'    )
+       var(ttr, 'againstElectronTight'     )
+       var(ttr, 'againstElectronLooseMVA5' )
+       var(ttr, 'againstElectronMediumMVA5')
+       var(ttr, 'againstElectronTightMVA5' )
+       var(ttr, 'againstElectronVTightMVA5')
+
+
+
        vmtr = self.vmtree
        bookParticle(vmtr, 'veto_muon')
 
@@ -103,7 +148,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
 
        vttr = self.vttree
        bookParticle(vttr, 'veto_tau')
-       
+
 
        btr = self.btree
        var(btr, 'bjet_pt')
@@ -117,24 +162,24 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
        bookJet(jtr, 'jet')
        var(jtr, 'jet_flav')
        var(jtr, 'jet_mass')
-       
+
        gtr = self.gentree
        var(gtr, 'gen_pt')
        var(gtr, 'gen_eta')
        var(gtr, 'gen_phi')
        var(gtr, 'gen_pdgid')
-       
+
 #       var(jtr, 'jet_pt')
 #       var(jtr, 'jet_eta')
 #       var(jtr, 'jet_phi')
 
-              
+
     def declareHandles(self):
         super(H2TauTauTreeProducerEMT2, self).declareHandles()
 
         self.handles['pfmetraw'] = AutoHandle(
             'cmgPFMETRaw',
-            'std::vector<cmg::BaseMET>' 
+            'std::vector<cmg::BaseMET>'
             )
 
         self.handles['jets'] = AutoHandle( 'cmgPFJetSel',
@@ -143,7 +188,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
         self.mchandles['genParticles'] = AutoHandle('genParticlesPruned',
                                                     'std::vector<reco::GenParticle>'
             )
-        
+
 #        self.mchandles['source'] =  AutoHandle(
 #            'source',
 #            'LHEEventProduct'
@@ -155,11 +200,11 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
 #       genParticles = [GenParticle(l) for l in self.mchandles['genParticles'].product() if l.status()==3 and l.pdgId()<100 and l.numberOfDaughters()==1 and l.daughter(0).pdgId() == l.pdgId() and abs(l.pdgId()) not in [12,14,16,23,24]]
 #       genParticles = [GenParticle(l) for l in self.mchandles['genParticles'].product() if l.status()==3 and l.pdgId()<100 and l.numberOfDaughters()==1 and l.daughter(0).pdgId() == l.pdgId() and abs(l.pdgId()) not in [12,14,16,23,24]]
        genParticles = [GenParticle(l) for l in self.mchandles['genParticles'].product() if l.status()==3 and abs(l.pdgId()) in [11,13,15,5]]
-       
+
        tr = self.tree
        tr.reset()
 
-       fill( tr, 'run', event.run) 
+       fill( tr, 'run', event.run)
        fill( tr, 'lumi',event.lumi)
        fill( tr, 'evt', event.eventId)
        fill( tr, 'rho', event.rho)
@@ -175,7 +220,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
        fill( tr, 'nJets', len(event.cleanJets))
        fill( tr, 'weight', event.eventWeight)
        fill( tr, 'nGen', len(genParticles))
-       
+
 #       if self.cfg_comp.isMC:
 #           nparton = self.mchandles['source'].product().hepeup().NUP
 #           fill( tr, 'NUP', nparton)
@@ -188,7 +233,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
 
        trig_M8E17 = False
        trig_M17E8 = False
-       
+
 #       for itrig in event.hltPaths:
 #
 #           if itrig.find('Mu8_Ele17')!=-1:
@@ -201,7 +246,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
 
        self.tree.tree.Fill()
 
-       
+
        allJets = self.handles['jets'].product()
        maxJets = []
 
@@ -231,11 +276,11 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
            else:
                fill( mtr, 'muon_jetpt', -999)
                fill( mtr, 'muon_njet', -999)
-               
+
 
 
            self.mtree.tree.Fill()
-           
+
        etr = self.etree
        etr.reset()
 
@@ -249,7 +294,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
            fill(etr, 'electron_id_weight', eleIDscale_MuEG_2012_53X(ie.pt(), ie.eta()))
            fill(etr, 'electron_mass', ie.mass())
            fill(etr, 'electron_reliso', ie.relIso(0.5,1))
-           
+
            bm, dr2min = bestMatch(ie, maxJets)
            if dr2min < 0.25:
                fill( etr, 'electron_jetpt', bm.pt())
@@ -257,10 +302,10 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
            else:
                fill( etr, 'electron_jetpt', -999)
                fill( etr, 'electron_njet', -999)
-               
+
 
            self.etree.tree.Fill()
-           
+
        ttr = self.ttree
        ttr.reset()
 
@@ -293,21 +338,63 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
            fill(ttr, 'tau_againstE0Raw', it.againstE0Raw)
 #           fill(ttr, 'tau_againstE0Cat', it.againstE0Cat)
            fill(ttr, 'dBisolation', it.dBisolation)
+       ## RM new TauIDs
+           fill(ttr, 'byIsolationMVA3oldDMwoLTraw'    , it.byIsolationMVA3oldDMwoLTraw    )
+           fill(ttr, 'byLooseIsolationMVA3oldDMwoLT'  , it.byLooseIsolationMVA3oldDMwoLT  )
+           fill(ttr, 'byMediumIsolationMVA3oldDMwoLT' , it.byMediumIsolationMVA3oldDMwoLT )
+           fill(ttr, 'byTightIsolationMVA3oldDMwoLT'  , it.byTightIsolationMVA3oldDMwoLT  )
+           fill(ttr, 'byVTightIsolationMVA3oldDMwoLT' , it.byVTightIsolationMVA3oldDMwoLT )
+           fill(ttr, 'byVVTightIsolationMVA3oldDMwoLT', it.byVVTightIsolationMVA3oldDMwoLT)
+
+           fill(ttr, 'byIsolationMVA3oldDMwLTraw'     , it.byIsolationMVA3oldDMwLTraw     )
+           fill(ttr, 'byLooseIsolationMVA3oldDMwLT'   , it.byLooseIsolationMVA3oldDMwLT   )
+           fill(ttr, 'byMediumIsolationMVA3oldDMwLT'  , it.byMediumIsolationMVA3oldDMwLT  )
+           fill(ttr, 'byTightIsolationMVA3oldDMwLT'   , it.byTightIsolationMVA3oldDMwLT   )
+           fill(ttr, 'byVTightIsolationMVA3oldDMwLT'  , it.byVTightIsolationMVA3oldDMwLT  )
+           fill(ttr, 'byVVTightIsolationMVA3oldDMwLT' , it.byVVTightIsolationMVA3oldDMwLT )
+
+           fill(ttr, 'byIsolationMVA3newDMwoLTraw'    , it.byIsolationMVA3newDMwoLTraw    )
+           fill(ttr, 'byLooseIsolationMVA3newDMwoLT'  , it.byLooseIsolationMVA3newDMwoLT  )
+           fill(ttr, 'byMediumIsolationMVA3newDMwoLT' , it.byMediumIsolationMVA3newDMwoLT )
+           fill(ttr, 'byTightIsolationMVA3newDMwoLT'  , it.byTightIsolationMVA3newDMwoLT  )
+           fill(ttr, 'byVTightIsolationMVA3newDMwoLT' , it.byVTightIsolationMVA3newDMwoLT )
+           fill(ttr, 'byVVTightIsolationMVA3newDMwoLT', it.byVVTightIsolationMVA3newDMwoLT)
+
+           fill(ttr, 'byIsolationMVA3newDMwLTraw'     , it.byIsolationMVA3newDMwLTraw     )
+           fill(ttr, 'byLooseIsolationMVA3newDMwLT'   , it.byLooseIsolationMVA3newDMwLT   )
+           fill(ttr, 'byMediumIsolationMVA3newDMwLT'  , it.byMediumIsolationMVA3newDMwLT  )
+           fill(ttr, 'byTightIsolationMVA3newDMwLT'   , it.byTightIsolationMVA3newDMwLT   )
+           fill(ttr, 'byVTightIsolationMVA3newDMwLT'  , it.byVTightIsolationMVA3newDMwLT  )
+           fill(ttr, 'byVVTightIsolationMVA3newDMwLT' , it.byVVTightIsolationMVA3newDMwLT )
+
+           fill(ttr, 'againstMuonLoose3'   , it.againstMuonLoose3   )
+           fill(ttr, 'againstMuonTight3'   , it.againstMuonTight3   )
+           fill(ttr, 'againstMuonMVALoose' , it.againstMuonMVALoose )
+           fill(ttr, 'againstMuonMVAMedium', it.againstMuonMVAMedium)
+           fill(ttr, 'againstMuonMVATight' , it.againstMuonMVATight )
+
+           fill(ttr, 'againstElectronLoose'     , it.againstElectronLoose     )
+           fill(ttr, 'againstElectronMedium'    , it.againstElectronMedium    )
+           fill(ttr, 'againstElectronTight'     , it.againstElectronTight     )
+           fill(ttr, 'againstElectronLooseMVA5' , it.againstElectronLooseMVA5 )
+           fill(ttr, 'againstElectronMediumMVA5', it.againstElectronMediumMVA5)
+           fill(ttr, 'againstElectronTightMVA5' , it.againstElectronTightMVA5 )
+           fill(ttr, 'againstElectronVTightMVA5', it.againstElectronVTightMVA5)
 
            self.ttree.tree.Fill()
-       
+
        vmtr = self.vmtree
        vmtr.reset()
        for im in event.vetomuoncand:
            fillParticle(vmtr, 'veto_muon', im)
            self.vmtree.tree.Fill()
-           
+
        vetr = self.vetree
        vetr.reset()
        for ie in event.vetoelectroncand:
            fillParticle(vetr, 'veto_electron', ie)
            self.vetree.tree.Fill()
-           
+
        vttr = self.vttree
        vttr.reset()
        for it in event.vetotaucand:
@@ -325,7 +412,7 @@ class H2TauTauTreeProducerEMT2( TreeAnalyzerNumpyEMT ):
            fill(btr, 'bjet_flav', ib.partonFlavour())
            fill(btr, 'bjet_mva', ib.btag('combinedSecondaryVertexBJetTags'))
            fill(btr, 'bjet_mass', ib.mass())
-           self.btree.tree.Fill()           
+           self.btree.tree.Fill()
 
 
        jtr = self.jtree
