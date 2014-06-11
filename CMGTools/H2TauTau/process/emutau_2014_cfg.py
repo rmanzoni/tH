@@ -8,8 +8,8 @@ from CMGTools.H2TauTau.proto.weights.weighttable import mu_id_taumu_2012, mu_iso
 from CMGTools.RootTools.RootTools import *
 
 # set True when you want to throw the jobs
-# jobmode = True
-jobmode  = False
+jobmode = True
+# jobmode  = False
 selector = False
 
 if jobmode:
@@ -224,15 +224,18 @@ if not jobmode:
         comp.splitFactor = 80
 
 selectedComponents =  [tH_YtMinus1, TTJetsSemiLept]
-selectedComponents =  [TTJetsSemiLept]
-# selectedComponents =  [tH_YtMinus1]
+# selectedComponents =  [TTJetsSemiLept]
+selectedComponents =  [tH_YtMinus1]
 
-tH_YtMinus1.puFileMC      = puFileMC
-tH_YtMinus1.puFileData    = puFileData
-TTJetsSemiLept.puFileMC   = puFileMC
-TTJetsSemiLept.puFileData = puFileData
+tH_YtMinus1.puFileMC       = puFileMC
+tH_YtMinus1.puFileData     = puFileData
+tH_YtMinus1.splitFactor = 80
 
-# sequence.remove(triggerAna) ## for tH signal only
+TTJetsSemiLept.puFileMC    = puFileMC
+TTJetsSemiLept.puFileData  = puFileData
+# TTJetsSemiLept.splitFactor = 80
+
+sequence.remove(triggerAna) ## for tH signal only
 
 # import pdb ; pdb.set_trace()
 

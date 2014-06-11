@@ -279,7 +279,7 @@ class WHEMTAnalyzer(Analyzer):
 
     def tauiso(self, pyl):
         '''check tau isolation.'''
-        return self.testLeg1Iso(pyl, 'byIsolationMVA3newDMwLTraw', 0.6) ## RM FIXME
+        return self.testLeg1Iso(pyl, 'byLooseIsolationMVA3newDMwLT') ## RM FIXME
 
 
 
@@ -292,7 +292,7 @@ class WHEMTAnalyzer(Analyzer):
             pyl.associatedVertex = event.goodVertices[0]
 
             if pyl.pt() > 20 and abs(pyl.eta()) < 2.5 and \
-                   pyl.tauID("decayModeFinding") and self.testLeg1Iso(pyl, 'byIsolationMVA3newDMwLTraw', 0.6) and abs(pyl.dz()) < 0.2:
+                   pyl.tauID("decayModeFinding") and self.testLeg1Iso(pyl, 'byLooseIsolationMVA3newDMwLT') and abs(pyl.dz()) < 0.2:
 
                 leptons.append( pyl )
 

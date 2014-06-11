@@ -1,0 +1,110 @@
+{
+    "AlgoList": [], 
+    "BadJobs": [], 
+    "CreatedBy": "htautau_group", 
+    "DateCreated": "1393489356", 
+    "Files": {
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_1.root": [
+            true, 
+            14060
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_10.root": [
+            true, 
+            14084
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_11.root": [
+            true, 
+            14170
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_12.root": [
+            true, 
+            14165
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_13.root": [
+            true, 
+            13984
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_14.root": [
+            true, 
+            14128
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_15.root": [
+            true, 
+            14241
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_16.root": [
+            true, 
+            13927
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_17.root": [
+            true, 
+            13948
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_18.root": [
+            true, 
+            13935
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_19.root": [
+            true, 
+            14155
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_2.root": [
+            true, 
+            14091
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_20.root": [
+            true, 
+            5064
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_3.root": [
+            true, 
+            13995
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_4.root": [
+            true, 
+            14033
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_5.root": [
+            true, 
+            14054
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_6.root": [
+            true, 
+            14082
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_7.root": [
+            true, 
+            14060
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_8.root": [
+            true, 
+            14097
+        ], 
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27/cmgTuple_9.root": [
+            true, 
+            14044
+        ]
+    }, 
+    "FilesBad": 0, 
+    "FilesCount": 20, 
+    "FilesEntries": 272317, 
+    "FilesGood": 20, 
+    "MaxRun": -1, 
+    "MinRun": -1, 
+    "Name": "/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27", 
+    "PathList": [
+        "/store/cmst3/group/htautau/CMG/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_16_0/EMuTau_Yuta_Feb27"
+    ], 
+    "PhysicsGroup": "CMG", 
+    "PrimaryDataset": "/tblv_H126to2tau_q_YtMinus1-madgraph-pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM", 
+    "PrimaryDatasetEntries": -1, 
+    "PrimaryDatasetFraction": -1.0, 
+    "ReportVersion": 3, 
+    "RunList": [], 
+    "StageHost": "castorcms", 
+    "Status": "VALID", 
+    "TierList": [], 
+    "Topdir": "/eos/cms/store/cmst3/group/htautau/CMG", 
+    "ValidDuplicates": {}, 
+    "data": {}
+}
